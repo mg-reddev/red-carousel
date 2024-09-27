@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(font/Roboto-Regular.ttf);
+}
+
+body {
+  margin-top: 40px;
+}
+
+.interactive-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.elementor-carousel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 110px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 1.2s ease;
+}
+
+.bar-carousel {
+  width: 0%;
+  height: 3px;
+  background-color: blue;
+  transition: width 0.5s ease;
+}
+
+.elementor-carousel:hover {
+  transform: scale(1.15);
+}
+
+.elementor-carousel.hover-active {
+  transform: scale(1.15);
+}
+
+.elementor-carousel:hover .img-carousel>img {
+  transform: translateY(-10px);
+}
+
+.elementor-carousel:hover .bar-carousel {
+  width: 90%;
+}
+
+.img-carousel {
+  height: 80%;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-carousel>img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 1.2s ease;
+}
+
+.img-carousel>img:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.description-carousel {
+  color: black;
+  text-wrap: wrap;
+  font-size: 10px;
+  text-align: justify;
+  padding: 9px;
+  font-family: 'Roboto', sans-serif;
+}
